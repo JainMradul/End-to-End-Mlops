@@ -71,9 +71,9 @@ The best model outputs an accuracy of around 91.1%, with a regularisation streng
 Hyperdrive model is deployed as it had a higher accuracy. The model was registered and deployed as an Azure Container Instance (ACI) webservice, with insights enabled.
 Sample test data has been converted to JSON format and passed to the deployed ACI service to test the endpoint
 
-![dep1](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/d2.PNG)
-![dep2](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/d1.PNG)
-![dep3](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep1.PNG)
+![dep1](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep1.PNG)
+![dep2](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep2.PNG)
+![dep3](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep3.PNG)
 
 ## Screen Recording
 https://youtu.be/Ng1ft5gCkFM
