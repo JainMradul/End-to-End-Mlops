@@ -263,4 +263,4 @@ Output is the death event risk probability in json format : {predict: [0.1836931
 - Check different metrics Like AUC and Precision - Accuracy not necesarily the correct metric to evaluate the model performance
 
 ## Screen Recording
-https://youtu.be/Ng1ft5gCkFM
+https://youtu.be/146E6Kb-JcE
