@@ -59,9 +59,9 @@ The parameters are experiment timeout of 30 minutes with max concurrent iteratio
 
 Dataset passes all the GuardRail and AutoML uses various gradient boosting ensembles to arrive at the best metric, there don't seem to be any needs for improvement as such but different evaluation metrics along with more experiment time could be used to identify the best model - in our case we have used "accuracy" and 30 minutes
 
-Voting Ensemble Model details:
+### Voting Ensemble Model details:
 
-Model 1 :
+#### Model 1 :
 
 {
     "class_name": "XGBoostClassifier",
@@ -85,7 +85,7 @@ Model 1 :
     "spec_class": "sklearn"
 }
 
-Model 2:
+#### Model 2:
 
 {
     "class_name": "LightGBMClassifier",
@@ -110,7 +110,7 @@ Model 2:
     "spec_class": "sklearn"
 }
 
-Model 3:
+#### Model 3:
 
 {
     "class_name": "XGBoostClassifier",
@@ -134,7 +134,7 @@ Model 3:
     "spec_class": "sklearn"
 }
 
-Model 4:
+#### Model 4:
 
 {
     "class_name": "RandomForestClassifier",
@@ -154,7 +154,7 @@ Model 4:
     "spec_class": "sklearn"
 }
 
-Model 5:
+#### Model 5:
 
 {
     "class_name": "LogisticRegression",
@@ -171,7 +171,7 @@ Model 5:
     "spec_class": "sklearn"
 }
 
-Model 6:
+#### Model 6:
 
 {
     "class_name": "ExtraTreesClassifier",
@@ -191,7 +191,7 @@ Model 6:
     "spec_class": "sklearn"
 }
 
-Model 7:
+#### Model 7:
 
 {
     "class_name": "LightGBMClassifier",
@@ -222,7 +222,7 @@ Model 7:
 ![automl](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/automl3.PNG)
 
 ## Hyperparameter Tuning
-Hyperdrive is used with SKLearn's Logistic Regression to accomplish classification task.
+Hyperdrive is used with SKLearn's **Logistic Regression** to accomplish classification task.
 
 Following two hyperparameters has been tuned:
 
@@ -232,7 +232,7 @@ Following two hyperparameters has been tuned:
 The parameters were sampled using Random Sampling, with Bandit Policy for an early termination.
 
 ### Results
-The best model outputs an accuracy of around 91.1%, with a regularisation strength of 0.5 and max iter 75. Since this accuracy is higher than that of the AutoMl model hence this model has been deployed
+**The best model outputs an accuracy of around 91.1%, with a regularisation strength of 0.5 and max iter 75**. Since this accuracy is higher than that of the AutoMl model hence this model has been deployed
 
 ![hyperdrive](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/hd1.PNG)
 ![hyperdrive](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/hd2.PNG)
