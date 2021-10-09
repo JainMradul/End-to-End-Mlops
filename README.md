@@ -245,6 +245,14 @@ The best model outputs an accuracy of around 91.1%, with a regularisation streng
 Hyperdrive model is deployed as it had a higher accuracy. The model was registered and deployed as an Azure Container Instance (ACI) webservice, with insights enabled.
 Sample test data has been converted to JSON format and passed to the deployed ACI service to test the endpoint
 
+Example:
+
+{"data": [{"age": 75.0, "anaemia": 0, "creatinine_phosphokinase": 582, "diabetes": 0, "ejection_fraction": 20, "high_blood_pressure": 1, "platelets": 265000.0, "serum_creatinine": 1.9, "serum_sodium": 130, "sex": 1, "smoking": 0, "time": 4}]}
+
+Above data is passed to scoring uri :'http://9a5d892d-7ed6-4093-946e-c6c42f7a035d.southcentralus.azurecontainer.io/score'
+
+Output is the death event risk probability in json format : {predict: [0.18369319511183924, 0.8163068048881608]}
+
 ![dep1](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep1.PNG)
 ![dep2](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep2.PNG)
 ![dep3](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep3.PNG)
