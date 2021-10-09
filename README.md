@@ -47,6 +47,158 @@ Voting Ensemble Model details:
 
 Model 1 :
 
+{
+    "class_name": "XGBoostClassifier",
+    "module": "automl.client.core.common.model_wrappers",
+    "param_args": [],
+    "param_kwargs": {
+        "booster": "gbtree",
+        "colsample_bytree": 0.7,
+        "eta": 0.2,
+        "gamma": 0,
+        "max_depth": 8,
+        "max_leaves": 255,
+        "n_estimators": 100,
+        "objective": "reg:logistic",
+        "reg_alpha": 1.5625,
+        "reg_lambda": 0.8333333333333334,
+        "subsample": 0.7,
+        "tree_method": "auto"
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 2:
+
+{
+    "class_name": "LightGBMClassifier",
+    "module": "automl.client.core.common.model_wrappers",
+    "param_args": [],
+    "param_kwargs": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 0.99,
+        "learning_rate": 0.04211105263157895,
+        "max_bin": 110,
+        "max_depth": 9,
+        "min_child_weight": 0,
+        "min_data_in_leaf": 0.07586448275862069,
+        "min_split_gain": 0.10526315789473684,
+        "n_estimators": 100,
+        "num_leaves": 53,
+        "reg_alpha": 0.3157894736842105,
+        "reg_lambda": 0.8421052631578947,
+        "subsample": 0.6931578947368422
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 3:
+
+{
+    "class_name": "XGBoostClassifier",
+    "module": "automl.client.core.common.model_wrappers",
+    "param_args": [],
+    "param_kwargs": {
+        "booster": "gbtree",
+        "colsample_bytree": 1,
+        "eta": 0.4,
+        "gamma": 0.1,
+        "max_depth": 10,
+        "max_leaves": 127,
+        "n_estimators": 50,
+        "objective": "reg:logistic",
+        "reg_alpha": 0.8333333333333334,
+        "reg_lambda": 1.1458333333333335,
+        "subsample": 0.8,
+        "tree_method": "auto"
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 4:
+
+{
+    "class_name": "RandomForestClassifier",
+    "module": "sklearn.ensemble",
+    "param_args": [],
+    "param_kwargs": {
+        "bootstrap": true,
+        "class_weight": null,
+        "criterion": "entropy",
+        "max_features": 0.8,
+        "min_samples_leaf": 0.01,
+        "min_samples_split": 0.056842105263157895,
+        "n_estimators": 10,
+        "oob_score": true
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 5:
+
+{
+    "class_name": "LogisticRegression",
+    "module": "sklearn.linear_model",
+    "param_args": [],
+    "param_kwargs": {
+        "C": 1.7575106248547894,
+        "class_weight": null,
+        "multi_class": "multinomial",
+        "penalty": "l2",
+        "solver": "lbfgs"
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 6:
+
+{
+    "class_name": "ExtraTreesClassifier",
+    "module": "sklearn.ensemble",
+    "param_args": [],
+    "param_kwargs": {
+        "bootstrap": true,
+        "class_weight": "balanced",
+        "criterion": "gini",
+        "max_features": "sqrt",
+        "min_samples_leaf": 0.01,
+        "min_samples_split": 0.15052631578947367,
+        "n_estimators": 100,
+        "oob_score": true
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+Model 7:
+
+{
+    "class_name": "LightGBMClassifier",
+    "module": "automl.client.core.common.model_wrappers",
+    "param_args": [],
+    "param_kwargs": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 0.6933333333333332,
+        "learning_rate": 0.09473736842105263,
+        "max_bin": 110,
+        "max_depth": 8,
+        "min_child_weight": 6,
+        "min_data_in_leaf": 0.003457931034482759,
+        "min_split_gain": 1,
+        "n_estimators": 25,
+        "num_leaves": 227,
+        "reg_alpha": 0.9473684210526315,
+        "reg_lambda": 0.42105263157894735,
+        "subsample": 0.49526315789473685
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
 
 
 ![automl](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/automl1.PNG)
