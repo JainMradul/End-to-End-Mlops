@@ -23,8 +23,11 @@ Independent Variables : Age, Gender, anaemia (categorical: 0 or 1), creatinine p
 These variables are used to predict whether the patient will survive the heart failure or not (Death Event: 0 - no or 1 - yes).
 
 
-### Task
-Classification task to predict death event by heart failure, expressed by the DEATH_EVENT variable with a binary (0 or 1) outcome
+### Objective
+Identify the patients who have a high risk of death due to heart failure.
+
+We have modeled this as classification task to predict death event by heart failure, expressed by the DEATH_EVENT variable with a binary (0 or 1) outcome
+we have finally achieved the accuracy of around 91.1% which means that we are able to predict the risk of death correctly 91.1% of the time.
 
 ### Access
 The dataset is uploaded and registered in tabular form on the ML Azure workspaceblobstore. The dataset URL/datastore path can be used to access the data in the Jupyter notebooks used for model training via python SDK.
@@ -35,6 +38,19 @@ The dataset is uploaded and registered in tabular form on the ML Azure workspace
 The AutoML notebook uses the Python SDK to train a variety of models and arrive at the best metric - accuracy in our case. 
 
 A standard CPU-based compute cluster with 6 nodes is deployed to run the experiments.
+
+AutoML Settings & Config we have used : 
+
+automl_settings = {"experiment_timeout_minutes": 15,
+                   "max_concurrent_iterations": 6,
+                   "primary_metric": "accuracy"}
+
+automl_config = AutoMLConfig(task="classification",
+                              compute_target="mlops-compute",
+                              training_data=dataset,
+                              label_column_name="DEATH_EVENT",
+                              n_cross_validations=4,
+                              **automl_settings)
 
 ### Results
 The AutoML run trained a number of models and gave a best accuracy of around 87% by the Voting Ensemble classifier (the best model). 
@@ -216,7 +232,7 @@ Following two hyperparameters has been tuned:
 The parameters were sampled using Random Sampling, with Bandit Policy for an early termination.
 
 ### Results
-The best model outputs an accuracy of around 91.1%, with a regularisation strength of 0.5. Since this accuracy is higher than that of the AutoMl model hence this model has been deployed
+The best model outputs an accuracy of around 91.1%, with a regularisation strength of 0.5 and max iter 75. Since this accuracy is higher than that of the AutoMl model hence this model has been deployed
 
 ![hyperdrive](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/hd1.PNG)
 ![hyperdrive](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/hd2.PNG)
