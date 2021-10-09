@@ -257,5 +257,10 @@ Output is the death event risk probability in json format : {predict: [0.1836931
 ![dep2](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep2.PNG)
 ![dep3](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/dep3.PNG)
 
+## Further Improvements
+- Increase the experiment time out to 3 hours and see if there is any model with higher accuracy
+- Try Hyperdrive with Tree based model - XGBoost/LightGbm/RandomForest and see if there is any improvement in accuracy
+- Check different metrics Like AUC and Precision - Accuracy not necesarily the correct metric to evaluate the model performance
+
 ## Screen Recording
 https://youtu.be/Ng1ft5gCkFM
