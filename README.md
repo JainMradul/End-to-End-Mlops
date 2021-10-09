@@ -43,6 +43,12 @@ The parameters are experiment timeout of 30 minutes with max concurrent iteratio
 
 Dataset passes all the GuardRail and AutoML uses various gradient boosting ensembles to arrive at the best metric, there don't seem to be any needs for improvement as such but different evaluation metrics along with more experiment time could be used to identify the best model - in our case we have used "accuracy" and 30 minutes
 
+Voting Ensemble Model details:
+
+Model 1 :
+
+
+
 ![automl](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/automl1.PNG)
 ![automl](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/automl2.PNG)
 ![automl](https://github.com/JainMradul/End-to-End-Mlops/blob/main/screenshots/automl3.PNG)
